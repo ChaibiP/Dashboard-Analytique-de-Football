@@ -26,4 +26,4 @@ Les données utilisées sont inspirées des statistiques publiques de la saison 
 
 ## Apercu : 
 ![Dashboard](images/dashboard1.png)
-(images/dashboard2.png)
+![Dashboard2](images/dashboard2.png)
