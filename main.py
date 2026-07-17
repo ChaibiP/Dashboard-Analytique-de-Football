@@ -6,13 +6,13 @@ players = pd.read_csv("data/players.csv", sep=";")
 top_scorers = players.sort_values(
     "Goals",
     ascending=False
-)
+).head(5)
 
 best_players_by_rating = players.sort_values(
     "rating",
     ascending=False
 )
-top_assisters=players.sort_values(
+top_assists=players.sort_values(
     "assists",
     ascending=False
 )
@@ -24,7 +24,7 @@ print(best_players_by_rating.head(5))
 print("5 meilleurs buteurs de l'effectif : ")
 print(top_scorers.head(5))
 print("5 meilleurs passeurs de l'effectif : ")
-print(top_assisters.head(5))
+print(top_assists.head(5))
 position_count = players["Position"].value_counts()
 print(position_count)
 total_players = len(players)
@@ -45,16 +45,14 @@ attackers = players[
 best_attackers=attackers.sort_values(
         "rating",
         ascending=False
-    )
-best_attackers=best_attackers.head(3)
+    ).head(3)
 defenders=players[
     players["Position"] == "Defenseur"
 ]
 best_defenders=defenders.sort_values(
     "rating",
     ascending=False
-)
-best_defenders=best_defenders.head(3)
+).head(3)
 
 midfielders=players[
     players["Position"]=="Milieu"
@@ -62,8 +60,7 @@ midfielders=players[
 best_midfielders=midfielders.sort_values(
     "rating",
     ascending=False
-)
-best_midfielders=best_midfielders.head(3)
+).head(3)
 
 
 fig = px.bar(
@@ -78,6 +75,17 @@ fig = px.pie(
     values=position_count.values,
     names=position_count.index,
     title="Composition de l'effectif ayant +500min"
+)
+
+fig.show()
+
+fig = px.scatter(
+    players,
+    x="Games",
+    y="rating",
+    size="Goals",
+    hover_name="Name",
+    title="Régularité et impact des joueurs"
 )
 
 fig.show()
