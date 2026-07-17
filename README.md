@@ -23,3 +23,7 @@ Les données utilisées sont inspirées des statistiques publiques de la saison 
 
 ## Accéder au Dashboard :
 (https://dashboard-analytique-de-football-iwbk2kked6zain7gcrmdra.streamlit.app/)
+
+## Apercu : 
+![Dashboard](images/dashboard1.png)
+(images/dashboard2.png)
