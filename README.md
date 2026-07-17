@@ -17,5 +17,6 @@ SQLite
 Plotly
 Streamlit
 
+Les indicateurs offensifs sont séparés des évaluations globales afin d'éviter de comparer injustement des joueurs ayant des rôles différents.
 
 Les données utilisées sont inspirées des statistiques publiques de la saison 2025-2026 et sont destinées à un projet pédagogique d'analyse de données.
