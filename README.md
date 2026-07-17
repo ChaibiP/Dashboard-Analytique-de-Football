@@ -1,5 +1,5 @@
 # Dashboard-Analytique-de-Football
-Dashboard d'analyse de données sportives développé en Python.
+Dashboard d'analyse de données sportives développé en Python se basant sur les performances de l'effectif de l'Olympique de Marseille sur la Saison 25/26 ( au moins 500 minutes jouées )
 
 
 ## Fonctionnalités
