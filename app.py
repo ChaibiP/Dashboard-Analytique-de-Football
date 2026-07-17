@@ -1,4 +1,5 @@
 import streamlit as st
+import sqlite3
 import pandas as pd
 import plotly.express as px
 
@@ -7,10 +8,17 @@ st.set_page_config(
     layout="wide"
 )
 
-players = pd.read_csv(
-    "data/players.csv",
-    sep=";"
+connection = sqlite3.connect(
+    "database/football.db"
 )
+
+players = pd.read_sql_query(
+    "SELECT * FROM players",
+    connection
+)
+
+connection.close()
+st.sidebar.success("Données chargées depuis SQLite")
 
 st.title("OM Data Analytics Dashboard")
 st.write(
