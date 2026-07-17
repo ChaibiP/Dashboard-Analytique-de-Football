@@ -48,7 +48,18 @@ top_scorers_graph = px.bar(
     y="Goals",
     title="Top 5 buteurs"
 )
+top_assists=players.sort_values(
+    "assists",
+    ascending=False
+).head(5)
 st.plotly_chart(top_scorers_graph)
+top_assists_graph=px.bar(
+    top_assists,
+    x="Name",
+    y="assists",
+    title="Top 5 passeurs"
+)
+st.plotly_chart(top_assists_graph)
 position_count = players["Position"].value_counts()
 lineup_graph = px.pie(
     position_count,
