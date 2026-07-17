@@ -20,7 +20,7 @@ players = pd.read_sql_query(
 connection.close()
 st.sidebar.success("Données chargées depuis SQLite")
 
-st.title("OM Data Analytics Dashboard")
+st.title("OM Data Analytics Dashboard 25/26")
 st.write(
     "Analyse des performances des joueurs ayant joué plus de 500 minutes."
 )
