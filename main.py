@@ -53,7 +53,6 @@ best_defenders=defenders.sort_values(
     "rating",
     ascending=False
 ).head(3)
-
 midfielders=players[
     players["Position"]=="Milieu"
 ]
@@ -61,8 +60,6 @@ best_midfielders=midfielders.sort_values(
     "rating",
     ascending=False
 ).head(3)
-
-
 fig = px.bar(
     top_scorers,
     x="Name",
@@ -76,9 +73,7 @@ fig = px.pie(
     names=position_count.index,
     title="Composition de l'effectif ayant +500min"
 )
-
 fig.show()
-
 fig = px.scatter(
     players,
     x="Games",
@@ -87,5 +82,4 @@ fig = px.scatter(
     hover_name="Name",
     title="Régularité et impact des joueurs"
 )
-
 fig.show()
