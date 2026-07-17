@@ -16,3 +16,6 @@ Pandas
 SQLite
 Plotly
 Streamlit
+
+
+Les données utilisées sont inspirées des statistiques publiques de la saison 2025-2026 et sont destinées à un projet pédagogique d'analyse de données.
